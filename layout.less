@@ -1,0 +1,66 @@
+/* CSS declarations go here */
+@import "layout.import.less";
+
+body {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  .direction(column);
+}
+
+@chat-width: 200px;
+
+nav {
+  .height(100px, 0);
+  .direction(row);
+  background: red;
+
+  .left-stretch {
+    .width(0, 1);
+  }
+
+  .nav-content {
+    .width(600px, 0);
+    background: blue;
+  }
+
+  .right-stretch {
+    .width(@chat-width, 1);
+  }
+}
+
+.body {
+  .height(0, 1);
+  .direction(row);
+
+  .stretch {
+    .width(0, 1);
+  }
+
+  .scrollable {
+    background: green;
+    .width(400px, 0);
+  }
+
+  .trending {
+    background: blue;
+    .width(200px, 0);
+  }
+
+  .chat {
+    .width(@chat-width, 0);
+    .direction(column);
+
+    .friends {
+      .height(0, 1);
+      background: yellow;
+    }
+
+    .search {
+      .height(50px, 0);
+      background: orange;
+    }
+  }
+}

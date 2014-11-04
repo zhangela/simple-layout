@@ -1,0 +1,19 @@
+.direction(@dir) {
+  display: flex;
+  flex-direction: @dir;
+  align-items: stretch;
+}
+
+.width(@basis, @flex-grow) {
+  flex-basis: calc(@basis);
+  flex-grow: @flex-grow;
+  flex-shrink: 0;
+  overflow: auto;
+}
+
+.height(@basis, @flex-grow) {
+  flex-basis: calc(@basis);
+  flex-grow: @flex-grow;
+  flex-shrink: 0;
+  overflow: auto;
+}
